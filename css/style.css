@@ -1,0 +1,272 @@
+/* ===== RESET & GLOBAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  background: linear-gradient(
+    180deg,
+    #9ccfff 0%,
+    #eef5ff 40%,
+    #ffd966 100%
+  );
+  color: #444;
+  min-height: 100vh;
+}
+
+/* ===== BIODATA ===== */
+.biodata {
+  text-align: center;
+}
+
+.biodata-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.biodata-grid div {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px 18px;
+  border-radius: 18px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.biodata-grid span {
+  display: block;
+  font-size: 0.8rem;
+  color: #7b8fd6;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .biodata-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== NAVBAR ===== */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 25px;
+}
+
+nav a {
+  position: relative;
+  text-decoration: none;
+  padding: 10px 22px;
+  color: #7a8fb8;
+  font-weight: 600;
+
+  background: rgba(255, 255, 255, 0.7);
+
+  /* bentuk awan */
+  border-radius: 50px 50px 45px 45px;
+
+  border: 2px solid #dbeafe;
+
+  box-shadow: 
+    0 8px 18px rgba(180, 210, 255, 0.35);
+
+  transition: 
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    color 0.35s ease;
+}
+
+nav a:hover {
+  color: #a6b6d9;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 95%;
+  }
+}
+
+/* ===== HERO ===== */
+.hero {
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.hero.small {
+  padding: 50px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #ff9f1c;
+}
+
+.hero p {
+  margin-top: 10px;
+  color: #5f6caf;
+}
+
+/* ===== HOME HERO (PHOTO + TEXT) ===== */
+.home-hero {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #fff;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.hero-text h1 {
+  font-size: 2.3rem;
+}
+
+.hero-text p {
+  margin-top: 8px;
+  color: #5f6caf;
+}
+
+/* ===== SECTION ===== */
+section {
+  padding: 0 10%;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: rgba(255,255,255,0.85);
+  border-radius: 30px;
+  padding: 35px;
+  width: fit-content;
+  max-width: 75%;
+  margin: 0 auto 35px auto;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  animation: fadeUp 0.8s ease;
+}
+
+.card h2 {
+  color: #ffaf40;
+  margin-bottom: 15px;
+}
+
+.card p {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.desc {
+  margin-bottom: 15px;
+}
+
+.card .desc {
+  margin: 0 0 15px 0; 
+  text-align: left;   
+  color: #7b8fd6;     
+  font-size: 1rem;    
+}
+
+.quote {
+  margin-top: 15px;
+  font-style: italic;
+  color: #7b8fd6;
+}
+
+/* ===== GALLERY ===== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.gallery-card {
+  text-align: center;
+}
+
+/* FOTO 3:2 */
+.gallery-image {
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border-radius: 20px;
+  background: white;
+
+  box-shadow:
+    0 10px 20px rgba(255, 210, 150, 0.35),
+    0 18px 35px rgba(160, 200, 255, 0.30),
+    0 25px 50px rgba(255, 180, 200, 0.25);
+
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.gallery-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-image:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 14px 28px rgba(255, 200, 120, 0.45),
+    0 24px 45px rgba(140, 180, 255, 0.35),
+    0 32px 65px rgba(255, 160, 190, 0.30);
+}
+
+/* DATE FOTO */
+.photo-date {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #6b7aa1;
+  text-align: center;
+  font-style: italic;
+}
+
+/* ===== CONTACT ===== */
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact a {
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ffd166, #a2d2ff);
+  color: white;
+  font-weight: 600;
+  text-align: center;
+}
+
+.contact a:hover {
+  opacity: 0.85;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #5f6caf;
+}
